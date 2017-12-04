@@ -135,6 +135,12 @@ def run_test_count_sines_from():
     print('Test 1 expected:', expected)
     print('       actual:  ', answer)
 
+
+    # ------------------------------------------------------------------
+    # TO DO: 4 (continued).
+    # Below this comment, add 5 more test cases of your own choosing.
+    # ------------------------------------------------------------------
+
     # Test 2:
     expected = 6
     answer = count_sines_from(1, 10)
@@ -164,11 +170,6 @@ def run_test_count_sines_from():
     answer = count_sines_from(1, 12)
     print('Test 6 expected:', expected)
     print('       actual:  ', answer)
-
-    # ------------------------------------------------------------------
-    # TO DO: 4 (continued).
-    # Below this comment, add 5 more test cases of your own choosing.
-    # ------------------------------------------------------------------
 
 
 def count_sines_from(m, n):
@@ -232,6 +233,35 @@ def run_test_count_sines_vs_cosines():
     # Below this comment, add 5 more test cases of your own choosing.
     # ------------------------------------------------------------------
 
+    # Test 2:
+    expected = 6
+    answer = count_sines_vs_cosines(10)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 3:
+    expected = 6
+    answer = count_sines_vs_cosines(3)
+    print('Test 3 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 4:
+    expected = 10
+    answer = count_sines_vs_cosines(8)
+    print('Test 4 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 5:
+    expected = 7
+    answer = count_sines_vs_cosines(9)
+    print('Test 5 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 6:
+    expected = 7
+    answer = count_sines_vs_cosines(1)
+    print('Test 6 expected:', expected)
+    print('       actual:  ', answer)
 
 def count_sines_vs_cosines(m):
     """
@@ -266,6 +296,12 @@ def count_sines_vs_cosines(m):
     #   of the RANGE expression, if you happen to know them.
     # ------------------------------------------------------------------
 
+    count = 0
+    for k in range(m + 1):
+        if math.sin(k) > math.cos(k):
+            count = count + 1
+
+    return count
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
