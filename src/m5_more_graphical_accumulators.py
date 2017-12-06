@@ -98,7 +98,7 @@ def draw_squares_from_circle(n, circle, window):
       :type window: rg.RoseWindow
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # CONSIDER using the ACCUMULATOR IN GRAPHICS pattern,
@@ -111,6 +111,18 @@ def draw_squares_from_circle(n, circle, window):
     #          ** FIRST DO A CONCRETE EXAMPLE BY HAND! **
     ####################################################################
     # ------------------------------------------------------------------
+
+    x = circle.center.x
+    y = circle.center.y
+    r = circle.radius
+    circle.attach_to(window)
+    for _ in range(n):
+        square = rg.Square(rg.Point(x,y), (r * 2))
+        x = x + r
+        y = y + r
+        square.attach_to(window)
+
+    window.render(0.05)
 
 
 def run_test_draw_circles_from_rectangle():
