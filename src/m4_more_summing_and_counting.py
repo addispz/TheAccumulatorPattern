@@ -135,7 +135,7 @@ def sum_from(m, n):
 def run_test_factorial():
     """ Tests the   factorial   function. """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this TEST function.
+    # DONE: 4. Implement this TEST function.
     #   It TESTS the  factorial  function defined below.
     #   Include at least **   5   ** tests (we wrote two for you).
     #
@@ -168,6 +168,24 @@ def run_test_factorial():
     #   ** uses  math.factorial  as an ORACLE for testing. **
     # ------------------------------------------------------------------
 
+    # Test 3:
+    answer_from_oracle = math.factorial(10)
+    answer_from_my_code = factorial(10)
+    print('Test 3 expected (from oracle):', answer_from_oracle)
+    print('       actual (from my code): ', answer_from_my_code)
+
+    # Test 4:
+    answer_from_oracle = math.factorial(26)
+    answer_from_my_code = factorial(26)
+    print('Test 4 expected (from oracle):', answer_from_oracle)
+    print('       actual (from my code): ', answer_from_my_code)
+
+    # Test 5:
+    answer_from_oracle = math.factorial(100)
+    answer_from_my_code = factorial(100)
+    print('Test 5 expected (from oracle):', answer_from_oracle)
+    print('       actual (from my code): ', answer_from_my_code)
+
 
 def factorial(n):
     """
@@ -196,7 +214,7 @@ def factorial(n):
 def run_test_count_cosines_from():
     """ Tests the   count_cosines_from   function. """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement this TEST function.
+    # DONE: 6. Implement this TEST function.
     #   It TESTS the  count_cosines_from  function defined below.
     #   Include at least **   6   ** tests (we wrote one for you).
     #              ** Yes, 6 (six) tests. **
@@ -236,9 +254,33 @@ def run_test_count_cosines_from():
     # ------------------------------------------------------------------
 
     # Test 2:
-    expected = 4
-    answer = count_cosines_from(4, 8, -0.5)
+    expected = 0
+    answer = count_cosines_from(9, 8, -0.3)
     print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 3:
+    expected = 6
+    answer = count_cosines_from(1, 8, -0.5)
+    print('Test 3 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 4:
+    expected = 5
+    answer = count_cosines_from(4, 10, -0.8)
+    print('Test 4 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 5:
+    expected = 1
+    answer = count_cosines_from(7, 8, 0.2)
+    print('Test 5 expected:', expected)
+    print('       actual:  ', answer)
+
+    # Test 6:
+    expected = 8
+    answer = count_cosines_from(1, 12, -0.5)
+    print('Test 6 expected:', expected)
     print('       actual:  ', answer)
 
 
@@ -281,7 +323,7 @@ def count_cosines_from(m, n, x):
 def run_test_sum_unit_fractions_from():
     """ Tests the   sum_unit_fractions_from   function. """
     # ------------------------------------------------------------------
-    # TODO: 8. Implement this TEST function.
+    # DONE: 8. Implement this TEST function.
     #   It TESTS the  sum_unit_fractions_from  function defined below.
     #   Include at least **   3   ** tests (we wrote one for you).
     # Use the same 4-step process as for previous TEST functions.
@@ -301,6 +343,18 @@ def run_test_sum_unit_fractions_from():
     # TO DO: 8 (continued).
     # Below this comment, add 2 more test cases of your own choosing.
     # ------------------------------------------------------------------
+
+    # Test 2:
+    expected = 3.103211  # This is APPROXIMATELY the correct answer.
+    answer = sum_unit_fractions_from(1, 12)
+    print('Test 2 expected:', expected, '(approximately)')
+    print('       actual:  ', answer)
+
+    # Test 3:
+    expected = 1.764406  # This is APPROXIMATELY the correct answer.
+    answer = sum_unit_fractions_from(4, 20)
+    print('Test 3 expected:', expected, '(approximately)')
+    print('       actual:  ', answer)
 
 
 def sum_unit_fractions_from(m, n):
@@ -333,4 +387,6 @@ def sum_unit_fractions_from(m, n):
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
+
+
 main()
