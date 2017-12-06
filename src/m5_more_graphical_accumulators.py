@@ -117,7 +117,7 @@ def draw_squares_from_circle(n, circle, window):
     r = circle.radius
     circle.attach_to(window)
     for _ in range(n):
-        square = rg.Square(rg.Point(x,y), (r * 2))
+        square = rg.Square(rg.Point(x, y), (r * 2))
         x = x + r
         y = y + r
         square.attach_to(window)
@@ -343,7 +343,7 @@ def draw_lines_from_rectangles(rectangle1, rectangle2, n, window):
       :type window: rg.RoseWindow
       """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # CONSIDER using the ACCUMULATOR IN GRAPHICS pattern,
@@ -401,4 +401,6 @@ def draw_lines_from_rectangles(rectangle1, rectangle2, n, window):
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # ----------------------------------------------------------------------
+
+
 main()
